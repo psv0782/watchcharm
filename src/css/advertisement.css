@@ -1,0 +1,105 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.caption-container {
+  width: 100%;
+  /* max-width: 279px; */
+  padding: 60px 28px;
+  border-radius: 30px;
+  background-color: #0c0c0c;
+  background-image: url(/img/m-advert.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+
+}
+
+.advertisement-caption {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: rgba(251, 251, 251, 0.5);
+}
+
+.advertisement-accent {
+  color: #fbfbfb;
+}
+
+.advertisement-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fbfbfb;
+  border: 1px solid rgba(251, 251, 251, 0.15);
+  border-radius: 16px;
+  min-width: 160px;
+  height: 48px;
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.advertisement-link:hover,
+.advertisement-link:focus {
+  color: #0c0c0c;
+  background-color: #fbfbfb;
+}
+
+@media (min-width: 768px) {
+  .caption-container {
+    max-width: 704px;
+    padding: 80px 64px;
+    gap: 32px;
+    background-image: url(/img/p-advert.webp);
+  }
+
+  @media (min-resolution: 192dpi) {
+    .caption-container {
+      background-image: url(/img/p-advert@2x.webp);
+    }
+  }
+
+  .advertisement-caption {
+    font-size: 44px;
+    line-height: 0.92;
+  }
+}
+
+@media (min-width: 1280px) {
+  .caption-container {
+    max-width: 1150px;
+    padding-top: 83px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 83px;
+    flex-wrap: nowrap;
+    gap: 140px;
+    background-image: url(/img/d-advert.webp);
+  }
+
+  @media (min-resolution: 192dpi) {
+    .caption-container {
+      background-image: url(/img/d-advert@2x.webp);
+    }
+  }
+
+  .advertisement-caption {
+    font-size: 50px;
+    line-height: 0.92;
+  }
+}
